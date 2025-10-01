@@ -1,1 +1,52 @@
-<p>home works!</p>
+<header class="app-header">
+  <nav class="app-nav">
+    <ul>
+      @for (item of menuItems; track item) {
+      <li>
+        <a [class.active]="item === activeMenuItem()" (click)="setActive(item)">
+          {{ item }}
+        </a>
+      </li>
+      }
+    </ul>
+  </nav>
+</header>
+
+<main class="hero-section">
+  <div class="hero-left">
+    <p class="line1">{{ line1() }}<span class="cursor"></span></p>
+    <p class="line2">{{ line2() }}<span class="cursor"></span></p>
+    <p class="line3">{{ line3() }}<span class="cursor"></span></p>
+  </div>
+
+  <div class="hero-middle">
+    <div class="image-container">
+      <img ngSrc="assets/foto_perfil.png" alt="Foto de Perfil do Lucas" width="450" height="450" />
+    </div>
+  </div>
+
+  <div class="hero-right">
+    <p>
+      Desenvolvedor Angular especializado em criar experiências digitais rápidas, escaláveis e com
+      foco em performance. Tenho sólida experiência em grandes projetos, utilizando o ecossistema
+      Angular moderno com TypeScript, RxJS, Signals, Angular Material e Tailwind CSS. Sou apaixonado
+      pelo desenvolvimento de componentes reutilizáveis, Design Systems, animações fluidas e por
+      evoluir continuamente a performance e a acessibilidade das aplicações.
+    </p>
+  </div>
+</main>
+<footer class="footer">
+  <h1>Skills</h1>
+  <div class="skills-carousel-container">
+    <div class="skills-track">
+      @for (skill of skillsTrack; track $index) {
+      <div class="skill-item">
+        <div class="skill-icon">
+            <img [ngSrc]="skill.icon" [alt]="skill.name + ' icon'" width="50" height="50">
+          </div>
+        <span>{{ skill.name }}</span>
+      </div>
+      }
+    </div>
+  </div>
+</footer>
