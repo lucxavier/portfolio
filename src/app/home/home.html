@@ -1,17 +1,3 @@
-<header class="app-header">
-  <nav class="app-nav">
-    <ul>
-      @for (item of menuItems; track item) {
-      <li>
-        <a [class.active]="item === activeMenuItem()" (click)="setActive(item)">
-          {{ item }}
-        </a>
-      </li>
-      }
-    </ul>
-  </nav>
-</header>
-
 <main class="hero-section">
   <div class="hero-left">
     <p class="line1">{{ line1() }}<span class="cursor"></span></p>

@@ -10,8 +10,6 @@ import { NgOptimizedImage } from '@angular/common';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class Home implements OnInit {
-  menuItems = ['Home', 'Projects', 'Contacts'];
-  activeMenuItem = signal('Home');
 
   skills = [
     { name: 'HTML', icon: 'assets/html.png' },
@@ -38,10 +36,6 @@ export class Home implements OnInit {
 
   ngOnInit() {
     this.typeWriter();
-  }
-
-  setActive(item: string) {
-    this.activeMenuItem.set(item);
   }
 
   private typeWriter() {

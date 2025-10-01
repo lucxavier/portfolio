@@ -1,1 +1,17 @@
-<router-outlet />
+<header class="app-header">
+  <nav class="app-nav">
+    <ul>
+      @for (item of menuItems; track item) {
+      <li>
+        <a href="#" [routerLink]="item.route" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+          {{ item.name }}
+        </a>
+      </li>
+      }
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <router-outlet></router-outlet>
+</main>

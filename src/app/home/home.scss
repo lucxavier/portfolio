@@ -1,65 +1,13 @@
 :host {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  flex-grow: 1; // Allow home to fill the main container
   background-color: #1a1a1a;
   font-family: 'Poppins', sans-serif;
   color: #fff;
 }
 
-.app-header {
-  padding: 1.5rem 2rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-}
-
-.app-nav ul {
-  display: flex;
-  gap: 2.5rem;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.app-nav a {
-  cursor: pointer;
-  font-size: 1.1rem;
-  font-weight: 500;
-  color: #a0a0a0;
-  text-decoration: none;
-  position: relative;
-  transition: color 0.3s ease, text-shadow 0.3s ease;
-
-  &::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: -5px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: #00e5ff;
-    transition: width 0.3s ease;
-  }
-
-  &:hover {
-    color: #ffffff;
-    text-shadow: 0 0 10px rgba(0, 229, 255, 0.7), 0 0 20px rgba(0, 229, 255, 0.5);
-  }
-
-  &.active {
-    color: #ffffff;
-
-    &::after {
-      width: 100%;
-    }
-  }
-}
-
-.hero-section {
-  flex-grow: 1;
+.hero-section {  flex-grow: 1;
   display: flex;
   align-items: center;
   justify-content: space-around;
