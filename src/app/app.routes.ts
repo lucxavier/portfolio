@@ -11,4 +11,8 @@ export const routes: Routes = [
     path: 'contacts',
     component: ContactComponent,
   },
+  {
+    path: 'projects',
+    loadComponent: () => import('./projects/projects'),
+  },
 ];

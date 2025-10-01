@@ -12,7 +12,7 @@ export class App {
   protected readonly title = signal('portfolio');
   menuItems = [
     { name: 'Home', route: '/' },
-    { name: 'Projects', route: '/projects' }, // Placeholder
-    { name: 'Contacts', route: '/contacts' },
+    { name: 'Projetos', route: '/projects' },
+    { name: 'Contatos', route: '/contacts' },
   ];
 }

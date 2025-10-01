@@ -1,0 +1,21 @@
+<div class="projects-container">
+  <div class="projects-grid">
+    @for (project of projects(); track project) {
+    <div class="project-card">
+      <div class="project-image-container">
+        <img
+          [ngSrc]="project.image"
+          [alt]="project.name"
+          class="project-image"
+          width="200"
+          height="200"
+        />
+        <div class="project-name-overlay">{{ project.name }}</div>
+      </div>
+      <div class="project-info">
+        <span class="project-name">{{ project.name }}</span>
+      </div>
+    </div>
+    }
+  </div>
+</div>
